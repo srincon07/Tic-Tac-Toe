@@ -20,13 +20,7 @@ class TicTacToe:
 
     def available_moves(self):
         return [i for i, spot in enumerate(self.board) if spot == ' ']
-        # moves = []
-        # for (i, spot) in enumerate(self.board):
-        #     # ['x', 'x', 'o'] --> [(0, 'x'), (1, 'x'), (2, 'o')]
-        #     if spot == ' ':
-        #         moves.append(i)
-        # return moves
-
+        
     def empty_squares(self):
         return ' ' in self.board
 
@@ -103,7 +97,8 @@ def play(game, x_player, o_player, print_game=True):
             letter = 'O' if letter == 'X' else 'X' # switches player
 
         # tiny break to make things a little bit easier to read
-        time.sleep(0.8)
+        if print_game:
+            time.sleep(0.8)
 
     if print_game:
         print('It\'s a tie')
