@@ -1,5 +1,4 @@
 import time
-from unittest import result
 from player import HumanPlayer, RandomComputerPlayer, GeniusComputerPlayer
 
 class TicTacToe:
@@ -111,12 +110,16 @@ def play(game, x_player, o_player, print_game=True):
 
 
 if __name__ == '__main__':
+    # Human vs Computer
     x_player = HumanPlayer('X')
     o_player = GeniusComputerPlayer('O')
     t = TicTacToe()
     play(t, x_player, o_player, print_game=True)
 
+    # Comment the lines above and uncomment the following ones to see the results 
+    # of the competition between two computer players
 
+    # Random computer vs Genius computer
     # x_wins = 0
     # o_wins = 0
     # ties = 0

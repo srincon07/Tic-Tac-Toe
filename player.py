@@ -1,5 +1,4 @@
 import math
-from os import stat
 import random
 
 class Player:
